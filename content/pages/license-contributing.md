@@ -9,7 +9,7 @@ If there's any ambiguity as to whether some content is covered by the Creative C
 
 All contributing authors retain the copyright to material they contribute, and authors as well as dates of creation are listed on each contributed post. Where no author is listed, you may assume [Paul Gowder](https://gowder.io) is the author unless specified otherwise. 
 
-This site also uses third-party plugins and themes, which appear in the Github repository. License information, where provided, is in those folders or in the Pelican static site generator website and/or Github repository; I (Paul Gowder) disclaim all copyright in modifications made to the third-party theme on this site.
+This site uses the [Pelican](https://blog.getpelican.com/) static site generator. It also uses third-party plugins and themes, which appear in the Github repository. License information, where provided, is in those folders or in the Pelican static site generator website and/or Github repository; I (Paul Gowder) disclaim all copyright in modifications made to the third-party theme on this site. The Blue Penguin theme which this site uses belongs to [Jody Frankowski](https://github.com/jody-frankowski/blue-penguin). 
 
 ## Contributing
 
@@ -17,7 +17,7 @@ To contribute to this site, write a tutorial in [Markdown](https://daringfirebal
 
 By contributing, you agree that any content you contribute will be available under the licenses described in the first paragraph of this page, though you will retain ownership of the copyright to that content.
 
-In order for your post to work on this site, you'll need to add several lines to the top of your markdown file.  At a minimum, you will need to specify a post title, date, tags, and authors.  When you select tags, please consult [the tags page](/tags) and endeavor where possible to use tags that correspond to existing content.
+In order for your post to work on this site, you'll need to add several lines to the top of your markdown file.  At a minimum, you will need to specify a post title, date, tags, and author. (If you don't include an author, it'll automatically attribute the post to me, which you probably don't want!)  When you select tags, please consult [the tags page](/tags) and endeavor where possible to use tags that correspond to existing content.
 
 The following is an example of a minimal post which includes the header block 
 
@@ -25,7 +25,7 @@ The following is an example of a minimal post which includes the header block
 title: How to Not Ever Use a Microsoft Product!!
 tags: microsoft, things_that_suck, reveal_codes
 date: 2019-12-10
-authors: Your Name
+author: Your Name
 
 Buy a very old computer and get a copy of WordPerfect somehow!  Cool idea, huh, bro? 
 
