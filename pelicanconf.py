@@ -16,6 +16,8 @@ USE_FOLDER_AS_CATEGORY = True
 ARTICLE_ORDER_BY = 'date'
 TIMEZONE = 'America/Chicago'
 
+DELETE_OUTPUT_DIRECTORY = True
+
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
