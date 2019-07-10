@@ -48,6 +48,14 @@
     <meta name="twitter:title" content="{{ SITENAME }}" />
     <meta property="og:title" content="{{ SITENAME }}" />
 
+    {% if article %}
+      {% if article.stylesheets %}
+        {% for stylesheet in article.stylesheets %}
+          {{ stylesheet }}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
 
 
     {% endblock head %}
@@ -113,9 +121,18 @@
                  {% endif %}
             </footer>
             {% endif %}
-        <div class="clear"></div>
+            <div class="clear"></div>
+        </div>
     </div>
-    </div>
-{% include 'analytics.html' %}
+    {% include 'analytics.html' %}
 </body>
+
+{% if article %}
+  {% if article.javascripts %}
+    {% for javascript in article.javascripts %}
+      {{ javascript }}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
 </html>
