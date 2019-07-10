@@ -12,7 +12,7 @@ In other words: you know how whenever you write a document in Word, you get into
 
 Here's an example of a simple Markdown document. 
 
-```markdown
+```md
 
 # My Amazing Heading 
 
