@@ -85,13 +85,15 @@
             </ul>
         </nav>
         {% endif %}
-    </header>
     <div class="header_box">
-            <h1 class="title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+            <h1 class="title"><a class="titlelink" href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             {% if SITESUBTITLE %}
             <h2>{{ SITESUBTITLE }}</h2>
             {% endif %}
-        </div>
+    </div>
+
+    </header>
+
     {% endif %}
     <div id="wrapper" >
         <div class="main"> 

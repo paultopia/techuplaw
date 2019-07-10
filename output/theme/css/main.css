@@ -29,6 +29,10 @@
     padding: .5rem;
   }
 
+  a.titlelink {
+      color: #FFF;
+  }
+
  .nav-link {
     padding: 0;
     color: white;
