@@ -2,7 +2,7 @@
 
 {% block head %}
 {{ super() }}
-<meta name="twitter:title" content="{{ SITENAME + ': ' + article.title }}" />
+<meta name="twitter:description" content="{{ article.title }}" />
     {% if article.tags %}
     <meta name="keywords" content="{{ article.tags|join(",") }}" />
     {% endif %}
