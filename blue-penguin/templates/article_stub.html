@@ -29,13 +29,12 @@
 
                     {% if article.authors %}
                         By {% for author in article.authors %}
-                        <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                        {% endfor %}
+                    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                    {% endfor %}
                     {% endif %}
-
-                    {% if article.category.name != "misc" %}
-                    &nbsp;&middot;&nbsp;<a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
-                    {% endif %}
+                    <span class="microdate" >
+                    &nbsp;&middot;&nbsp; {{ article.date.strftime("%b %d, %Y") }}
+                    </span>
                     {% if article.tags %}
                     &nbsp;&middot;
                     {% for t in article.tags %}
