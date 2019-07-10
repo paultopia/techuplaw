@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css"  />
     <meta name="generator" content="Pelican" />
     <meta name="description" content="{{ SITEDESCRIPTION }}" />
     <meta name="author" content="{{ AUTHOR }}" />
@@ -53,54 +54,53 @@
 </head>
 <body>
     {% if DISPLAY_HEADER or DISPLAY_HEADER is not defined %}
-    <header>
+    <header class="header">
         {% if DISPLAY_MENU or DISPLAY_MENU is not defined %}
-        <nav>
-            <ul>
+        
+        <nav class="nav">
+            <ul class="menu-nav">
             {% block ephemeral_nav %}{% endblock %}
                 {% if DISPLAY_HOME or DISPLAY_HOME is not defined %}
-                <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/">Home</a></li>
+                <li{% if output_file == "index.html" %} class="selected"{% endif %}><a class="nav-link" href="{{ SITEURL }}/">Home</a></li>
                 {% endif %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for p in pages %}
-                <li{% if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                <li{% if p == page %} class="selected"{% endif %}><a  class="nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
                 {% endif %}
                 {% for title, link in MENUITEMS %}
-                <li><a href="{{ link }}">{{ title }}</a></li>
+                <li><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
                 {% for name, link, file in MENU_INTERNAL_PAGES %}
-                <li{% if output_file == file %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ name }}</a></li>
+                <li{% if output_file == file %} class="selected"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ link }}">{{ name }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
         {% endif %}
-        <div class="header_box">
-            <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    </header>
+    <div class="header_box">
+            <h1 class="title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             {% if SITESUBTITLE %}
             <h2>{{ SITESUBTITLE }}</h2>
             {% endif %}
         </div>
-    </header>
     {% endif %}
-    <div id="wrapper">
+    <div id="wrapper" >
+        <div class="main"> 
         <div id="content">
             {%- block content -%}{%- endblock %}
 
-            {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
+            
+        </div>
+        {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
             <div class="clear"></div>
             <footer>
-                <p>
-                    A project of <a href="https://gowder.io">Paul Gowder</a>
-                    &middot;
-
-                    Always free and open access.
-
-                    &middot;
-
-                    <a href="{{ SITEURL }}/pages/license-and-how-to-contribute.html"> Copyright and Contribution Information</a>
-
-
+                <div>
+                    <span class="footer-span">A project of <a class="footer-link" href="https://gowder.io">Paul Gowder</a> </span>
+                    <span class="footer-span">Always free and open access.</span>
+                    <span class="footer-span"> <a  class="footer-link"  href="{{ SITEURL }}/pages/license-and-how-to-contribute.html"> Copyright and Contribution Information</a></span>
+                </div>
+                   
                 {% if FEED_ALL_ATOM %}
                     &middot;
 
@@ -113,8 +113,8 @@
                  {% endif %}
             </footer>
             {% endif %}
-        </div>
         <div class="clear"></div>
+    </div>
     </div>
 {% include 'analytics.html' %}
 </body>
