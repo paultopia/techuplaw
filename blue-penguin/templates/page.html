@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block head %}
+{{ super() }}
+<meta name="twitter:title" content="{{ SITENAME + ': ' + page.title }}" />
+{% endblock %}
+
 {% block title %}{{ SITENAME }} | {{ page.title }}{% endblock %}
 
 {% block content %}
