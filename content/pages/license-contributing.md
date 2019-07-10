@@ -9,7 +9,7 @@ If there's any ambiguity as to whether some content is covered by the Creative C
 
 All contributing authors retain the copyright to material they contribute, and authors as well as dates of creation are listed on each contributed post. Where no author is listed, you may assume [Paul Gowder](https://gowder.io) is the author unless specified otherwise. 
 
-This site uses the [Pelican](https://blog.getpelican.com/) static site generator. It also uses third-party plugins and themes, which appear in the Github repository. License information, where provided, is in those folders or in the Pelican static site generator website and/or Github repository; I (Paul Gowder) disclaim all copyright in modifications made to the third-party theme on this site. The Blue Penguin theme which this site uses belongs to [Jody Frankowski](https://github.com/jody-frankowski/blue-penguin). 
+This site uses the [Pelican](https://blog.getpelican.com/) static site generator (and is served with continuous integration on [Netlify](https://www.netlify.com/)). It also uses third-party plugins and themes, which appear in the Github repository. License information, where provided, is in those folders or in the Pelican static site generator website and/or Github repository; I (Paul Gowder) disclaim all copyright in modifications made to the third-party theme on this site. The Blue Penguin theme which this site uses belongs to [Jody Frankowski](https://github.com/jody-frankowski/blue-penguin). 
 
 ## Contributing
 
@@ -33,3 +33,4 @@ Buy a very old computer and get a copy of WordPerfect somehow!  Cool idea, huh, 
 
 If you don't know how to submit a pull request, consult [Github's documentation](https://help.github.com/en/articles/creating-a-pull-request). The basic workflow is to fork the repository, create a branch containing your pull request, and then use Github's web interface to start a pull request.  Then we can talk about it, and, if it's ready, I can merge it into the site... which should immediately publish it if I have things set up right. 
 
+Over time, I plan to build in the capacity to contribute more interesting content, such as binary files, templates (LaTeX pleading templates anyone?!), posts with dynamic (JavaScript) content, etc. This page will be updated when that happens. 
