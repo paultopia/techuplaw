@@ -8,7 +8,7 @@ SITEURL = ''
 
 MARKUP = ('md')
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['render_math', 'pelican_javascript']
+PLUGINS = ['render_math', 'pelican_javascript', 'simple_footnotes']
 PATH = 'content'
 MATH_JAX={"mathjax_font": "typewriter", 'color':'blue'}
 THEME='blue-penguin'

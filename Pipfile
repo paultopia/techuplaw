@@ -10,6 +10,7 @@ pelican = "*"
 markdown = "*"
 typogrify = "*"
 beautifulsoup4 = "*"
+html5lib = "*"
 
 [requires]
 python_version = "3.7"
