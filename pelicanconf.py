@@ -13,8 +13,8 @@ PATH = 'content'
 MATH_JAX={"mathjax_font": "typewriter", 'color':'blue'}
 THEME='blue-penguin'
 USE_FOLDER_AS_CATEGORY = True
-ARTICLE_ORDER_BY = 'date'
 TIMEZONE = 'America/Chicago'
+SUMMARY_MAX_LENGTH = 100
 
 DELETE_OUTPUT_DIRECTORY = True
 

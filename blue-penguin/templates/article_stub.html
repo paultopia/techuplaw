@@ -15,7 +15,9 @@
 
                 {% if page_name == 'index' %}
                 {{ article.summary }}
-                <a href="{{ SITEURL }}/{{ article.url }}"><button class="readmore">read more</button></a>
+                <div class="buttonwrapper">
+                    <center><a href="{{ SITEURL }}/{{ article.url }}"><button class="readmore">read more</button></a></center>
+                </div>
                 {% else %}
                 {{ article.content }}
                 {% endif %}
