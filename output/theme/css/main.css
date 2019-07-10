@@ -82,6 +82,15 @@
   #content {
     flex: 2;
   }
+
+  h4.date {
+      display: none;
+  }
+
+  article.post {
+      margin: 10px 10px;
+      padding:0px;
+  }
 }
 
 
