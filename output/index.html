@@ -50,107 +50,12 @@
                 </h2>
 
                 
-                
 
                 <h2>Why you should consider writing documents in Markdown</h2>
-<p>Markdown is a plain text formatting language.  It allows you, as the cool kids say, to separate content and the <em>semantic properties of content</em> (i.e., which bits of text are what---which bits are footnotes, which bits are quotes, which bits are headings) from the <em>style</em> of that content (which bits are italic, how much paragraphs are indented by, what font you're using, etc.).  </p>
-<p>In other words: you know how whenever you write a document in Word, you get into a nightmarish rabbit hole of things like trying to convince Word when to start and stop numbering a list?  Or how you can copy and paste some text in from somewhere else, and sometimes it includes the formatting, and sometimes it doesn't?  (And "paste and match formatting" seems to do something entirely random.)  Well, if you just write the text in one place, and then apply styling after the fact, you don't need to worry about that at all!  </p>
-<p>Here's an example of a simple Markdown document. </p>
-<div class="highlight"><pre><span></span><span class="gh">#</span> My Amazing Heading 
-
-Here I am.  Writing a document.  For the following reasons: 
-
-<span class="k">1.</span>  Because I want to.
-
-<span class="k">2.</span>  Because I said so. 
-
-<span class="k">3.</span>  Shut up.
-
-Now I&#39;m going to write a paragraph.  Look at me, paragraph. 
-
-This paragraph [<span class="nt">has a link</span>](<span class="na">https://google.com</span>) in it.  Neat-o. 
-</pre></div>
+<p>Markdown is a plain text formatting language.  It allows you, as the cool kids say, to separate content and the <em>semantic properties of content</em> (i.e., which bits of text are what---which bits are footnotes, which bits are quotes, which bits are …</p>
+                <a href="/why-and-how-to-use-markdown-instead-of-or-in-addition-to-word.html"><button class="readmore">read more</button></a>
 
 
-<p>You can write this with any ordinary plain text editor (like Textedit on a Mac or Notepad on a Windows machine), and then you can use a program like Pandoc (we'll cover this below) to convert it into a Microsoft Word document.  The numbered lists will be correctly formatted, without you having to fight with them.  The link will work right. Every paragraph will be consistently formatted.  And, best of all, you won't have had to click sub-sub-sub menus or figure out what "ribbon" some obscure command is on.  And, do you see how quickly your text editor started?  And how your text editor, unlike Word, didn't crash when you gave it a big document? </p>
-<p>Not only that, but you might not need to touch Microsoft Word at all.  You can also convert a Markdown file directly to PDF, or to a HTML page for display on the web (and to lots of other formats too). </p>
-<p>Moreover, when you're working in plain text, you open up lots of other superpowers. For example: Microsoft Word track changes is terrible; it makes things super-slow and, when you're doing a lot of changes, makes them almost totally unreadable. (Law professors who have gotten thousands of tiny changes back from Law Review editors: can I get a 'hell yeah'?)  But if you're working in plain text, you can use a <em>version control</em> tool called Git to track changes instead; it's vastly more powerful, and, once you learn it, vastly easier to use on a day-to-day basis. (Git is a subject for a future article on this site.)  If you're working with really large documents, you can use programming languages and advanced, powerful, text editors to do <a href="https://sociologicalgobbledygook.com/regular-expressions.html">sophisticated search and replace</a> functions that Microsoft can't handle.  The same goes for other kinds of added functionality: lots of things that you can do in a slow and crash-prone way in Word, like insert citations with a citation manager, can be done in a more fast and reliable way using text-based tools. </p>
-<p>There's a little bit of a learning curve, but once you get through it, I think you'll see that it's worthwhile!</p>
-<h2>How to use Markdown</h2>
-<p>There are a few things you need to have on your computer in order to use Markdown.</p>
-<h3>A good text editor</h3>
-<p>You shouldn't try to use Microsoft Word to edit Markdown. First of all, that would totally defeat the purpose (we're trying to <em>avoid</em> that terrible program, remember?)  Second, Word isn't designed to produce plain text files.  You should use a plain text editor.</p>
-<p>As I said, you already have one on your computer: Windows users have Notepad, Mac users have Textedit. (If you use Linux, you don't need this tutorial.) But in all honesty, those are kind of weaksauce text editors.  Here are my recommendations.</p>
-<p>If you, like me, are deeply embedded in the Apple ecosystem, just get <a href="https://bywordapp.com/">Byword</a>.  It's designed for Markdown, so it can do things like preview formatting. It syncs over iCloud between Mac and iOS devices.  It's very cheap. It's very simple. I use it for all my basic writing, like letters and such. Some people swear by <a href="https://ulysses.app/">Ulysses</a>, but it's vastly more expensive with an obnoxious subscription pricing model, so I won't recommend it or use it.</p>
-<p>For more demanding uses/if you want an editor that can be extended with code, I recommend one of the following two applications, which are both available for Windows and Mac: </p>
-<ul>
-<li>
-<p><a href="https://atom.io/">Atom</a>.  Pros: free, scriptable in Javascript.  Cons: can be a bit of a battery drain and resource hog (though probably not as bad as Microsoft Word).</p>
-</li>
-<li>
-<p><a href="https://www.sublimetext.com/">Sublime Text</a>. Pros: fast, lightweight, scriptable in Python (way better than JavaScript), just a beautifully designed piece of software---there are cults of people who love it.  Cons: A bit expensive ($80), although if you're willing to tolerate nag messages you can use for free. </p>
-</li>
-</ul>
-<p>On Mac there is also <a href="https://www.barebones.com/products/bbedit/">BBEdit</a>, which is fine. There are also dedicated Markdown editors for both platforms; like I said, I like Byword for Mac; for Windows I'm not sure what's best. </p>
-<p>Worth an honorable mention is <a href="https://www.literatureandlatte.com/scrivener/overview">Scrivener</a> which is a multi-platform application that is beloved by many writers. It's a kind of complicated program that allows you to break up a document into chunks and reorganize them, among many other features. It can handle Markdown input and output with a little bit of persuasion, though it's not really a plain-text editor at heart.  It's mostly useful as an intermediate writing stage to reorganize long documents; I will often just import a bunch of sections of a long article as individual Markdown files, organize them in Scrivener, and then dump them back out as one big Markdown file for further revision.</p>
-<p>Regardless of what platform you're on, you'll want to save markdown files with the extension <code>md</code> like <code>myfile.md</code>.  This will help your preferred text editor know that you're working with a Markdown file, and hence show you things like formatting previews and markup highlighting to make it easier to see what you're doing. </p>
-<h3>Pandoc and LaTeX</h3>
-<p><a href="https://pandoc.org/">Pandoc</a> is a program that allows you to convert Markdown files to numerous other formats. (It has many other superpowers as well, but this is the key use.)</p>
-<p>To use it, you need to get comfortable with your command line.  (For Mac, this is the Terminal application under Utilities, although once you get happy with using the commandline you'll probably want to upgrade to <a href="https://www.iterm2.com/">iTerm2</a>. I'm not sure how to get at it in Windows, but Google will help.)  Learning how to use the command line is the subject of a different tutorial, yet to be written, but here I'll assume you know how, or can google your way through it. </p>
-<p>To install Pandoc, you can <a href="https://pandoc.org/installing.html">download and run the relevant installer for your OS</a>.  If you're using a package manager you'll see instructions on how to do that from this page too (if you don't use a package manager, don't worry about it). </p>
-<p>In order to make nicely formatted PDFs, you should also install a program called LaTeX, which is the gold standard of typesetting software. It's a gigantic download (multiple gigs). For Mac, you can use <a href="https://tug.org/mactex/">MacTeX</a>; for Windows use <a href="https://miktex.org/">MiKTeX</a>.  I recommend just using the full, gigantic, version of the install so that you don't ever have to worry about not having something that you turn out to need. </p>
-<p>Pandoc and LaTeX are both free.</p>
-<h3>Using your shiny new software tools</h3>
-<p>Suppose you've written a Markdown file called <code>myfile.md</code>. Navigate, in the command line, to the folder it's in and type: </p>
-<p><code>pandoc myfile.md -s -o myfile.docx</code></p>
-<p>Pandoc will convert your Markdown file to a properly formatted Word file. </p>
-<p>You can also do <code>pandoc myfile.md -s -o myfile.pdf</code> to get a PDF file, and the same with <code>myfile.html</code> at the end to get a web page. </p>
-<p>That's really it!  There are lots of other options, and I really encourage you to read Pandoc's documentation, but this is the basic process. </p>
-<p>For further assistance, see <a href="https://pandoc.org/getting-started.html">Pandoc's Getting Started</a> page, which also includes a basic command line tutorial.</p>
-<h3>Writing Markdown</h3>
-<p>Markdown is a very simple format.  <a href="https://daringfireball.net/projects/markdown/basics">This web page</a> describes the basic version of the format and how it gets converted to HTML tags (the original purpose for which it was designed).</p>
-<p>One thing you'll notice is that Markdown as originally specified doesn't give you a lot of features. There's no way to add tables, for example, or footnotes, or even nested lists. Fortunately, there are a variety of extended versions of Markdown floating around.  I use <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc's own version of Markdown</a>, which is much more complex than the original but also much more powerful; you can just use that in a Markdown file in place of original Markdown and Pandoc will seamlessly handle it. Pandoc's Markdown gives you nested lists, footnotes, tables, smallcaps (always nice for law review articles) and numerous other fancy things.  But you should start with reading the original description of Markdown; it might be enough for you.</p>
-<h2>Markdown with Word</h2>
-<p>Another piece of the secret sauce for efficient document generation is to use Markdown <em>in conjunction with</em> Word.  Pandoc's built-in Word template uses styles to carry out all its formatting---just like <a href="https://law-hawaii.libguides.com/TLC_Research_Writing/WordStyles">everyone keeps telling you</a> you're supposed to be doing. The only difference is that adding styles in a Markdown document is lots faster easier than adding them in a Word document---if you want something to be an outline, you just have to put the little dash in, if you want something to be a block quote you just have to put a <code>&gt;</code> at the start of the paragraph, etc. </p>
-<p>Then, when you make your Word document, you already have styles defined for all the different semantic elements of your content---Microsoft Word already knows what chunks of text are outline items, what chunks of text are blockquotes, what chunks of text are footnotes, and so forth.  So all you need to do is edit the styles to have them look the way you want them to look, for example, making the blockquote text indented rather than italicized.  Then Word will be kind enough (assuming you know the correct clickey-clack menu incantations) to automatically change how everything else with that style looks.</p>
-<p>This is by far the easiest way to get all the advantages of Markdown, while still having granular control over the look of your document, and without having to create or install custom templates.</p>
-<h2>Toward the future!</h2>
-<p>One very useful thing to have for lawyers would be LaTeX and Word templates for a variety of common legal documents. For example, we could build templates for the formats required for filings in various courts, so that a final document PDF could be created without ever having to touch a Microsoft product. I will happy accept contributions for any such templates on this site; I may also try to write some myself. </p>
-<p>In the absence of this, it's probably still necessary for the time being to use the Markdown -&gt; Word workflow I described above for documents with interesting formatting. However, for simple documents, such as internal memos, or to generate draft documents to be worked up by support staff, Markdown with Pandoc on its own should be sufficient. </p>
-<h2>Addendum: a thread reproduced from Twitter.</h2>
-<p>In case you need some more convincing, here are my <a href="https://twitter.com/PaulGowder/status/1148612480920358912">ten theses</a> for why a Markdown/Pandoc-based workflow is better than anything involving Word (largely repetitive of the above, but in a nice list for easy propaganda distribution): </p>
-<ol>
-<li>
-<p>Performance. Even on my fast machines, word takes forever to start up and occasionally lags.  A lightweight text editor doesn't. </p>
-</li>
-<li>
-<p>I can keep track of changes by putting documents in a git repository, as opposed to the slow unreadable mess of Word track changes. </p>
-</li>
-<li>
-<p>I can easily edit on other devices, even an iPhone. </p>
-</li>
-<li>
-<p>Pandoc's word template is fine formatting for most of my uses; LaTeX, of course, is actually good formatting unlike anything Word can produce (which is why people who produce serious documents with actual desktop publishing appearance demands do not ever use Word---they use LaTeX if they're math/science people, and Adobe InDesign if they're artsy/marketing people). </p>
-</li>
-<li>
-<p>As you add special features to Word documents, like citations linked in with Zotero, it gets even more slow and crash-prone.  With Markdown and Pandoc, this is plain text and you can just compile with a Zotero-generated BibTex file. </p>
-</li>
-<li>
-<p>Same goes for math when I use it.  In Markdown you can use LaTeX math.  I once lost an entire chapter's worth of equations in copy editing because of MS Word bugs/version incompatability. </p>
-</li>
-<li>
-<p>For putting together or tweaking large documents, doing them in plain text makes it much easier to automate things, like regular expression replacements. </p>
-</li>
-<li>
-<p>Markdown produces many other formats. For example, if I decide I want an HTML page for my document, it's easy. (And markdown processors, unlike word, do not produce shit HTML.)</p>
-</li>
-<li>
-<p>I don't have to use lightweight text editors like Byword.  If I need really fancy stuff, I can use text editors with insane amounts of power, like Vim or Emacs.</p>
-</li>
-<li>
-<p>Numbering and bullet points are actually predictable with Markdown syntax. It's not random shit where Word guesses as to whether you want a bullet and you have to sacrifice a goat to get it to change its mind.  More generally, you know how lawyers cling to WordPerfect because of the magical "Reveal Codes" functionality?  Well, working in a lightweight, text-based, markup language like Markdown is like having reveal codes turned on all the time, but it doesn't obstruct your ability to see the text!</p>
-</li>
-</ol>
                 <div class="clear"></div>
 
                 <div class="info">
@@ -171,123 +76,11 @@ This paragraph [<span class="nt">has a link</span>](<span class="na">https://goo
                 </h2>
 
                 
-                
 
-                <p>Here's a hypo for you.  You're a criminal defense attorney, and you have a client who was arrested at a DUI checkpoint. Your client was subjected to a fast breath-test for alcohol, requiring them to blow into a machine. (Let's suppose that for some bizarre reason this counts as minimally intrusive and constitutional under <a href="https://www.law.cornell.edu/supremecourt/text/496/444">Michigan Dept. of State Police v. Sitz</a>; if it eases your mind, you may also assume that your client, and every other person stopped, consented to the test). Unfortunately, the machine reported that your client was intoxicated beyond the statutory limit (though it didn't report a specific blood alcohol content value), and your client was arrested on that basis. </p>
-<p>At the arraignment, the prosecutor comes to you and says the following: </p>
-<blockquote>
-<p>I'm prepared to present expert witness testimony showing that the breath test your client took has a 99% accuracy rate, measured against the most reliable way we have to determine whether someone is legally intoxicated. That's enough for a jury to find them guilty beyond a reasonable doubt---when the nice people in the jury box see that the defendant had a 99% chance of having been drunk, they'll be sure to convict on that evidence alone, and it's jail for your client. But I'm feeling merciful today. Tell them that if they plead guilty, I'll ask the court for no time behind bars, just a $5,000 fine and a year's license suspension. </p>
-</blockquote>
-<p><strong>How confident should you be that your client was actually drunk?  Should you believe what the prosecutor says?</strong> Think about this question before you scroll down.</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>If you turn around and advise your client to take the deal because conviction is a near-certainty, the next call you make should be to your malpractice insurer. You don't have nearly enough information to know confident you---or a jury---should be that your client is guilty of drunk driving. </p>
-<p>First of all, what does "accuracy" mean?  There are two ways that a test like this could be inaccurate. First, it could emit "false positives"---someone's not drunk, but the test says they are.  Second, it could emit "false negatives"---someone's drunk, but the test says they're sober.  There's no reason to think, <em>ex ante</em>, that any kind of test has similar false positive and false negative rates. (For an extreme example, imagine a totally broken test that always reports "drunk."  That test will have a false negative rate of 0, just because it never produces a negative result---but the false positive rate is doubtless rather higher.) If the prosecutor is being really dishonest, they could mean "false negative rate" by "accuracy," and not be telling you anything about the false positive rate at all. </p>
-<p>Let's give our prosecutor the benefit of the doubt on that question, however, and assume that the false positive rate and the false negative rate are both the same, and that "99% accuracy" means that the false positive rate and the false negative rate are each 0.01. You still don't have enough information to tell your client to take the deal. </p>
-<p>The last piece of information you need to know is the <em>base rate</em>---or what proportion of the people who would have been passing the checkpoint were actually drunk. It turns out that if the base rate is sufficiently low, even a very accurate test doesn't give you very much reason to be confident that the thing it's testing for is actually true. </p>
-<p>To see this, let's give you a base rate of 2%.  That is, suppose we know (believe with very high confidence) that 2% of the people who passed the checkpoint were actually intoxicated beyond the legal limit. For simplicity, let's assume this is a constant rate of drunkenness across the whole time the checkpoint is in operation, and let's further assume that we get this information from some reliable external source---not from arrest rates or any other source that itself depends on test accuracy. (For example, maybe a team of social scientists did a really good study of intoxication rates by geography and time.) </p>
-<p>Now imagine that 10,000 people get stopped by the checkpoint.  (That's a lot of people, but I'm making the number that high so we don't have to mess around with decimals later on. To make it more realistic, pretend the checkpoint is in New York City, and there are actually a bunch of checkpoints at the same time.)  Because the checkpoints were (let's assume) at random locations, and they test everyone, this is equivalent to a random sample of the population, so we should expect 2% of the people, or 200, to actually be drunk. </p>
-<p>Of those 200 drunk people, the test correctly identifies 198 of them as drunk, and 2 (our 1% false negative rate) are misidentified as sober and get off scot-free.</p>
-<p>However, there are also 9,800 sober people who get stopped and tested at the checkpoints. Our 1% false positive rate implies that 98 of those people are misidentified as sober and get arrested. </p>
-<p>So, what does this mean for your client?  Without any other information, the prosecutor (and, more importantly, the jury) can't know whether they were one of the 198 drunk people who got a positive test, or one of the unlucky 98 sober people.  After doing a little bit of easy arithmetic (for those who want the details: we're converting odds to probability), we can conclude that the probability that your client was drunk, if all we know is that they blew a positive result, is only about 67%.  That's better than even, to be sure---it sounds like probable cause... but is it beyond a reasonable doubt? Probably not!</p>
-<p>Below, you'll find a series of sliders, and a calculation of the ultimate probability that your client is actually guilty (or that some other claim about the world is true) given a particular false positive rate, false negative rate, and base rate.  Play around with these numbers, try to get a feel for how much of a difference the base rate makes.</p>
-<p><div id="app">
-dynamic content should appear here...
- </div></p>
-<p>Let's work through a few more examples. Imagine that the base rate is only 1%, and the accuracy rate (as described above) is still 99%.  Now, there are only 100 drunk people who take a breath test, and 99 of them get arrested.  There are 9,900 sober people who take a breath test, and 99 of them get arrested too.  There's only a 50-50 chance that your client was one of the drunk ones!  </p>
-<p>Let's bump the base rate back to 2% again, but now the test is only 95% accurate (the false negative and false positive rates are both 5%). Of the 200 drunk people, 190 get caught. Of the 9800 sober people, 490 get mistakenly arrested(!!!): it turns out that even though our client blew a positive result on the "95% accurate test," there's only about a 28% chance that they were actually drunk. If that's the only evidence the prosecution has, you shouldn't be taking a plea bargain, you should be filing a motion to dismiss! </p>
-<p>Statisticians and scientists call the mistake that the prosecutor wanted you to make "the base rate fallacy"---the error of neglecting the rules of "conditional probability" and not taking into account the base rate of some tested-for fact in figuring out how much information we learn from a test. But I prefer to call it the "base rate malpractice trap," because, if you fall into it, you'll give lousy advice to your clients and they really oughta sue you.  </p>
-<p>There's a simple mathematical formula that you can use to calculate problems like this. Let's use some variables, like in algebra. We'll call the actual chance that your client was drunk (the probability we're trying to calculate): <em>d</em>. Let's call the base rate: <em>b</em>. Call the false positive rate: <em>fp</em>. And call the false negative rate <em>fn</em>.  Then you can plug the numbers into the following equation:</p>
-<div class="math">$$d = \frac{b \cdot (1 - fn)}{(b \cdot (1- fn)) + ((1-b) \cdot fp)}$$</div>
-<p>Let's take our last example and apply this formula:</p>
-<div class="math">$$d = \frac{0.02 \cdot (1 - 0.05)}{(0.02 \cdot (1- 0.05)) + ((1-0.02) \cdot 0.05)}$$</div>
-<p>With some simplification steps: </p>
-<div class="math">$$d = \frac{0.02 \cdot 0.95}{(0.02 \cdot 0.95) + (0.98 \cdot 0.05)}$$</div>
-<div class="math">$$d = \frac{0.019}{0.019 + 0.049}$$</div>
-<div class="math">$$d = \frac{0.019}{0.068}$$</div>
-<div class="math">$$d \simeq 2.79$$</div>
-<p>which is what we got before, and what our calculator tells us. </p>
-<h3>Further reading</h3>
-<ul>
-<li>
-<p>For a detailed and mathier explanation of conditional probability and lots more in basic probability, you can see <a href="https://sociologicalgobbledygook.com/the-basics-of-probability.html">a lesson I gave to my students in a data science for lawyers course</a>.  </p>
-</li>
-<li>
-<p>For an academic paper reporting on a variety of evidence that judges fall into the base rate fallacy, see Christian Dahlman, Frank Zenker &amp; Farhan Sarwar, <a href="https://academic.oup.com/lpr/article/15/4/239/2580528">Miss rate neglect in legal evidence</a>, 15 Law, Probability and Risk, 239 (2016).</p>
-</li>
-</ul>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+                <p>Here's a hypo for you.  You're a criminal defense attorney, and you have a client who was arrested at a DUI checkpoint. Your client was subjected to a fast breath-test for alcohol, requiring them to blow into a machine. (Let's suppose that for some bizarre reason this counts as minimally …</p>
+                <a href="/dont-send-your-clients-to-prison-with-the-base-rate-malpractice-trap.html"><button class="readmore">read more</button></a>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
 
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        fonts: ['STIX', 'TeX']," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('Typewriter' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_Typewriter');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_Typewriter-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_Typewriter-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_Typewriter-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_Typewriter');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_Typewriter-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_Typewriter-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_Typewriter-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
                 <div class="clear"></div>
 
                 <div class="info">

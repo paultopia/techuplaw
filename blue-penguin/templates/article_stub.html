@@ -9,12 +9,18 @@
                 </h2>
                 {% endif %}
 
-		{% if not articles_page %}
-		{% include "translations.html" %}
-		{% endif %}                
-                
+		            {% if not articles_page %}
+		            {% include "translations.html" %}
+		            {% endif %}                
 
+                {% if page_name == 'index' %}
+                {{ article.summary }}
+                <a href="{{ SITEURL }}/{{ article.url }}"><button class="readmore">read more</button></a>
+                {% else %}
                 {{ article.content }}
+                {% endif %}
+
+
                 <div class="clear"></div>
 
                 <div class="info">
