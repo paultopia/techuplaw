@@ -40,13 +40,21 @@ At the arraignment, the prosecutor comes to you and says the following:
 
 If you turn around and advise your client to take the deal because conviction is a near-certainty, the next call you make should be to your malpractice insurer. You don't have nearly enough information to know confident you---or a jury---should be that your client is guilty of drunk driving. 
 
-First of all, what does "accuracy" mean?  There are two ways that a test like this could be inaccurate. First, it could emit "false positives"---someone's not drunk, but the test says they are.  Second, it could emit "false negatives"---someone's drunk, but the test says they're sober.  There's no reason to think, *ex ante*, that any kind of test has similar false positive and false negative rates. (For an extreme example, imagine a totally broken test that always reports "drunk."  That test will have a false negative rate of 0, just because it never produces a negative result---but the false positive rate is doubtless rather higher.) If the prosecutor is being really dishonest, they could mean "false negative rate" by "accuracy," and not be telling you anything about the false positive rate at all. 
+First of all, what does "accuracy" mean?  There are two ways that a test like this could be inaccurate. 
 
-Let's give our prosecutor the benefit of the doubt on that question, however, and assume that the false positive rate and the false negative rate are both the same, and that "99% accuracy" means that the false positive rate and the false negative rate are each 0.01. You still don't have enough information to tell your client to take the deal. 
+- First, it could emit "false positives"---someone's not drunk, but the test says they are.  
+
+- Second, it could emit "false negatives"---someone's drunk, but the test says they're sober.  
+
+There's no reason to think, *ex ante*, that any kind of test has similar false positive and false negative rates. (For an extreme example, imagine a totally broken test that always reports "drunk."  That test will have a false negative rate of 0, just because it never produces a negative result---but the false positive rate is doubtless rather higher.) If the prosecutor is being really dishonest, they could mean "false negative rate" by "accuracy," and not be telling you anything about the false positive rate at all. 
+
+Let's give our prosecutor the benefit of the doubt on that question and assume that the false positive rate and the false negative rate are both the same, and that "99% accuracy" means that the false positive rate and the false negative rate are each 0.01. **You still don't have enough information to tell your client to take the deal.**
 
 The last piece of information you need to know is the *base rate*---or what proportion of the people who would have been passing the checkpoint were actually drunk. It turns out that if the base rate is sufficiently low, even a very accurate test doesn't give you very much reason to be confident that the thing it's testing for is actually true. 
 
-To see this, let's give you a base rate of 2%.  That is, suppose we know (believe with very high confidence) that 2% of the people who passed the checkpoint were actually intoxicated beyond the legal limit. For simplicity, let's assume this is a constant rate of drunkenness across the whole time the checkpoint is in operation, and let's further assume that we get this information from some reliable external source---not from arrest rates or any other source that itself depends on test accuracy. (For example, maybe a team of social scientists did a really good study of intoxication rates by geography and time.) 
+To see this, let's give you a base rate of 2%.  That is, suppose we know (believe with very high confidence) that 2% of the people who passed the checkpoint were actually intoxicated beyond the legal limit. 
+
+(For simplicity, let's assume this is a constant rate of drunkenness across the whole time the checkpoint is in operation, and let's further assume that we get this information from some reliable external source---not from arrest rates or any other source that itself depends on test accuracy. For example, maybe a team of social scientists did a really good study of intoxication rates by geography and time.) 
 
 Now imagine that 10,000 people get stopped by the checkpoint.  (That's a lot of people, but I'm making the number that high so we don't have to mess around with decimals later on. To make it more realistic, pretend the checkpoint is in New York City, and there are actually a bunch of checkpoints at the same time.)  Because the checkpoints were (let's assume) at random locations, and they test everyone, this is equivalent to a random sample of the population, so we should expect 2% of the people, or 200, to actually be drunk. 
 
@@ -84,7 +92,7 @@ $$d = \frac{0.019}{0.019 + 0.049}$$
 
 $$d = \frac{0.019}{0.068}$$
 
-$$d \simeq 2.79$$
+$$d \simeq 0.279$$
 
 which is what we got before, and what our calculator tells us. 
 
