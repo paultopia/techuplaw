@@ -33,7 +33,7 @@ if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {{
         "        preview: '{latex_preview}'," +
         "    }}, " +
         "    'HTML-CSS': {{ " +
-        "        fonts: [{font_list}]," +
+        "        fonts: {font_list}," +
         "        styles: {{ '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {{color: '{color} ! important'}} }}," +
         "        linebreaks: {{ automatic: "+ linebreak +", width: '90% container' }}," +
         "    }}, " +
