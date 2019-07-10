@@ -68,7 +68,8 @@
 
 
 <p>If you don't know how to submit a pull request, consult <a href="https://help.github.com/en/articles/creating-a-pull-request">Github's documentation</a>. The basic workflow is to fork the repository, create a branch containing your pull request, and then use Github's web interface to start a pull request.  Then we can talk about it, and, if it's ready, I can merge it into the site... which should immediately publish it if I have things set up right. </p>
-<p>Over time, I plan to build in the capacity to contribute more interesting content, such as binary files, templates (LaTeX pleading templates anyone?!), posts with dynamic (JavaScript) content, etc. This page will be updated when that happens. </p>
+<p>You can also add posts with dynamic (JavaScript) content!  Just add a <code>javascripts</code> tag to the metadata block of your post with the filename of your script.  HTML tags work in markdown, so you can add classes and whatnot as needed to render the content. And put your script in the <code>content/js</code> directory. For an example, see <a href="https://raw.githubusercontent.com/paultopia/techuplaw/master/content/tutorials/base_rate.md">the source of the base rate tutorial</a>, which points to a file called <code>drunk.js</code> in the js directory, which in turn is a chunk of React created (because I personally hate writing JavaScript) by Clojurescript and Reagent (<a href="https://github.com/paultopia/bayesruleslider">source</a>).  So your tutorials can now include demos!</p>
+<p>Over time, I plan to build in the capacity to contribute more interesting content, such as binary files, templates (LaTeX pleading templates anyone?!), etc. This page will be updated when that happens. </p>
             </div>
 
             
