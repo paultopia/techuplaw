@@ -3,6 +3,7 @@
 {% block head %}
 {{ super() }}
 <meta name="twitter:description" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.title }}" />
 {% endblock %}
 
 {% block title %}{{ SITENAME }} | {{ page.title }}{% endblock %}

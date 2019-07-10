@@ -3,6 +3,7 @@
 {% block head %}
 {{ super() }}
 <meta name="twitter:description" content="{{ article.title }}" />
+<meta property="og:description" content="{{ article.title }}" />
     {% if article.tags %}
     <meta name="keywords" content="{{ article.tags|join(",") }}" />
     {% endif %}
