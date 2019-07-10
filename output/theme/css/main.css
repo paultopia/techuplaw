@@ -9,6 +9,7 @@
     padding: 0 .5rem ; 
   }
 
+
   .title {
     margin: 0;
     margin-top: 1rem;
@@ -97,6 +98,10 @@
 @media screen and (min-width: 601px) {
     span.microdate {
         display: none;
+    }
+
+    header .header_box {
+        padding-top: 4.5em;
     }
 }
 
