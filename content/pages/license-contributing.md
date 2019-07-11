@@ -21,7 +21,7 @@ In order for your post to work on this site, you'll need to add several lines to
 
 The following is an example of a minimal post which includes the header block 
 
-```
+```md
 title: How to Not Ever Use a Microsoft Product!!
 tags: microsoft, things_that_suck, reveal_codes
 date: 2019-12-10
