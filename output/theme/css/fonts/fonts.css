@@ -13,6 +13,21 @@
 }
 
 @font-face {
+    font-family: 'CooperHewitt';
+    src: url('CooperHewitt-Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'CooperHewitt';
+    src: url('CooperHewitt-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: 100;
+}
+
+
+@font-face {
     font-family: 'Charter';
     src: url('charter_bold.woff') format('woff');
     font-style: normal;
@@ -41,6 +56,14 @@
     font-weight: 300;
 }
 
+@font-face {
+    font-family: 'SourceCodePro';
+    src: url('SourceCodePro-Regular.otf.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+}
+
+
 
 body {
     font-family: Charter, Georgia, serif;
@@ -56,4 +79,18 @@ h1, h2, h3, h4, h5, h6 {
 a.nav-link {
     font-family: CooperHewitt, sans-serif;
     font-weight: 300;
+}
+
+.post pre, .page pre {
+    font-family: SourceCodePro, Monospace;
+}
+
+.info, {
+    font-family: CooperHewitt, sans-serif;
+    font-weight: 200;
+}
+
+.footer-span {
+    font-family: CooperHewitt, sans-serif;
+    font-weight: 100;
 }
