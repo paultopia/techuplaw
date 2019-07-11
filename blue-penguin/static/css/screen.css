@@ -143,7 +143,7 @@ blockquote {
 }
 .post p {
     text-align: justify;
-    htphens: auto;
+    hyphens: auto;
 }
 
 .page {
