@@ -4,13 +4,11 @@ date: 2019-07-09
 author: Paul Gowder
 
 
-## Why you should consider writing documents in Markdown
-
-Markdown is a plain text formatting language.  It allows you, as the cool kids say, to separate content and the *semantic properties of content* (i.e., which bits of text are what---which bits are footnotes, which bits are quotes, which bits are headings) from the *style* of that content (which bits are italic, how much paragraphs are indented by, what font you're using, etc.).  
+Markdown is a plain text formatting language.  It allows you, as the cool kids say, to separate content and the *semantic properties of content* (i.e., which bits of text are what--which bits are footnotes, which bits are quotes, which bits are headings) from the *style* of that content (which bits are italic, how much paragraphs are indented by, what font you're using, etc.).  
 
 In other words: you know how whenever you write a document in Word, you get into a nightmarish rabbit hole of things like trying to convince Word when to start and stop numbering a list?  Or how you can copy and paste some text in from somewhere else, and sometimes it includes the formatting, and sometimes it doesn't?  (And "paste and match formatting" seems to do something entirely random.)  Well, if you just write the text in one place, and then apply styling after the fact, you don't need to worry about that at all!  
 
-Here's an example of a simple Markdown document. 
+Here's an example of a simple Markdown document.  
 
 ```md
 
@@ -55,7 +53,7 @@ For more demanding uses/if you want an editor that can be extended with code, I 
 
 - [Atom](https://atom.io/).  Pros: free, scriptable in Javascript.  Cons: can be a bit of a battery drain and resource hog (though probably not as bad as Microsoft Word).
 
-- [Sublime Text](https://www.sublimetext.com/). Pros: fast, lightweight, scriptable in Python (way better than JavaScript), just a beautifully designed piece of software---there are cults of people who love it.  Cons: A bit expensive ($80), although if you're willing to tolerate nag messages you can use for free. 
+- [Sublime Text](https://www.sublimetext.com/). Pros: fast, lightweight, scriptable in Python (way better than JavaScript), just a beautifully designed piece of software--there are cults of people who love it.  Cons: A bit expensive ($80), although if you're willing to tolerate nag messages you can use for free. 
 
 On Mac there is also [BBEdit](https://www.barebones.com/products/bbedit/), which is fine. There are also dedicated Markdown editors for both platforms; like I said, I like Byword for Mac; for Windows I'm not sure what's best. 
 
@@ -97,9 +95,9 @@ One thing you'll notice is that Markdown as originally specified doesn't give yo
 
 ## Markdown with Word
 
-Another piece of the secret sauce for efficient document generation is to use Markdown *in conjunction with* Word.  Pandoc's built-in Word template uses styles to carry out all its formatting---just like [everyone keeps telling you](https://law-hawaii.libguides.com/TLC_Research_Writing/WordStyles) you're supposed to be doing. The only difference is that adding styles in a Markdown document is lots faster easier than adding them in a Word document---if you want something to be an outline, you just have to put the little dash in, if you want something to be a block quote you just have to put a `>` at the start of the paragraph, etc. 
+Another piece of the secret sauce for efficient document generation is to use Markdown *in conjunction with* Word.  Pandoc's built-in Word template uses styles to carry out all its formatting--just like [everyone keeps telling you](https://law-hawaii.libguides.com/TLC_Research_Writing/WordStyles) you're supposed to be doing. The only difference is that adding styles in a Markdown document is lots faster easier than adding them in a Word document--if you want something to be an outline, you just have to put the little dash in, if you want something to be a block quote you just have to put a `>` at the start of the paragraph, etc. 
 
-Then, when you make your Word document, you already have styles defined for all the different semantic elements of your content---Microsoft Word already knows what chunks of text are outline items, what chunks of text are blockquotes, what chunks of text are footnotes, and so forth.  So all you need to do is edit the styles to have them look the way you want them to look, for example, making the blockquote text indented rather than italicized.  Then Word will be kind enough (assuming you know the correct clickey-clack menu incantations) to automatically change how everything else with that style looks.
+Then, when you make your Word document, you already have styles defined for all the different semantic elements of your content--Microsoft Word already knows what chunks of text are outline items, what chunks of text are blockquotes, what chunks of text are footnotes, and so forth.  So all you need to do is edit the styles to have them look the way you want them to look, for example, making the blockquote text indented rather than italicized.  Then Word will be kind enough (assuming you know the correct clickey-clack menu incantations) to automatically change how everything else with that style looks.
 
 This is by far the easiest way to get all the advantages of Markdown, while still having granular control over the look of your document, and without having to create or install custom templates.
 
@@ -119,7 +117,7 @@ In case you need some more convincing, here are my [ten theses](https://twitter.
 
 3.  I can easily edit on other devices, even an iPhone. 
 
-4.  Pandoc's word template is fine formatting for most of my uses; LaTeX, of course, is actually good formatting unlike anything Word can produce (which is why people who produce serious documents with actual desktop publishing appearance demands do not ever use Word---they use LaTeX if they're math/science people, and Adobe InDesign if they're artsy/marketing people). 
+4.  Pandoc's word template is fine formatting for most of my uses; LaTeX, of course, is actually good formatting unlike anything Word can produce (which is why people who produce serious documents with actual desktop publishing appearance demands do not ever use Word--they use LaTeX if they're math/science people, and Adobe InDesign if they're artsy/marketing people). 
 
 5. As you add special features to Word documents, like citations linked in with Zotero, it gets even more slow and crash-prone.  With Markdown and Pandoc, this is plain text and you can just compile with a Zotero-generated BibTex file. 
 
