@@ -6,6 +6,10 @@ License: none (public domain)
 /* Modified by Jody Frankowski */
 /* Modified by ix5 */
 
+:root {  
+    --accent-color: #2A5D87;
+    }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -71,7 +75,7 @@ header, #wrapper {
 
 a {
     text-decoration: none;
-    color: #15A9DB;
+    color: var(--accent-color);
 }
 
 ul {
@@ -245,7 +249,7 @@ nav a:hover {
     color: #FFF;
 }
 nav li.selected a {
-    background-color: #15A9DB;
+    background-color: var(--accent-color);
     color: #FFF;
 }
 
@@ -347,8 +351,8 @@ button {
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
-    background-color: #15A9DB;
-    border-color: #15A9DB;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
     border-radius: 4px;
     border: 1px solid #bbb;
     cursor: pointer;
