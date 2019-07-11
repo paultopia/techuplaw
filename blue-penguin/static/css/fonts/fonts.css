@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'CooperHewitt';
+    src: url('CooperHewitt-Semibold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'CooperHewitt';
+    src: url('CooperHewitt-Book.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+}
+
+body {
+    font-family: Georgia, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: CooperHewitt, sans-serif;
+    font-weight: 700;
+}
+
+a.nav-link {
+    font-family: CooperHewitt, sans-serif;
+    font-weight: 300;
+}
