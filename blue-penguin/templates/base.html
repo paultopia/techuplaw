@@ -110,14 +110,14 @@
                     <span class="footer-span">A project of <a class="footer-link" href="https://gowder.io">Paul Gowder</a>. </span>
                     <span class="footer-span">Always free and open access.</span>
                     <span class="footer-span"> <a  class="footer-link"  href="{{ SITEURL }}/pages/license-and-how-to-contribute.html"> Copyright and Contribution Information</a>.</span>
+
+
+                    <span class="footer-span"> <a  class="footer-link" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">Atom Feed</a>. </span>
+
                 </div>
-                   
-                {% if FEED_ALL_ATOM %}
-                    &middot;
+                
 
 
-                <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">Atom Feed</a>
-                 {% endif %}
                  {% if FEED_ALL_RSS %}
                 &middot;
                 <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">Rss Feed</a>
