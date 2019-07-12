@@ -58,7 +58,7 @@ Now imagine that 10,000 people get stopped by the checkpoint.[ref]That's a lot o
 
 Of those 200 drunk people, the test correctly identifies 198 of them as drunk, and 2 (our 1% false negative rate) are misidentified as sober and get off scot-free.
 
-However, there are also 9,800 sober people who get stopped and tested at the checkpoints. Our 1% false positive rate implies that 98 of those people are misidentified as sober and get arrested. 
+However, there are also 9,800 sober people who get stopped and tested at the checkpoints. Our 1% false positive rate implies that 98 of those people are misidentified as drunk and get arrested. 
 
 So, what does this mean for your client?  Without any other information, the prosecutor (and, more importantly, the jury) can't know whether they were one of the 198 drunk people who got a positive test, or one of the unlucky 98 sober people.  After doing a little bit of easy arithmetic,[ref]For those who want the details: we're converting odds to probability[/ref] we can conclude that the probability that your client was drunk, if all we know is that they blew a positive result, is only about 67%.  That's better than even, to be sure--it sounds like probable cause... but is it beyond a reasonable doubt? Probably not!
 
