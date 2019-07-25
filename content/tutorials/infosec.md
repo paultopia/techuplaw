@@ -280,6 +280,26 @@ You're ethically obliged to manage your staff to protect client data and propert
 
 - Do not share user accounts on firm computers, networks. Every employee has their own account, with central IT capacity to limit access to sensitive resources and revoke access on termination.
 
+### But don't overburden your employees
+
+If you impose unnecessary demands on your employees, they are more likely to just ignore it, to suffer from security fatigue and just click "yes" on everything, etc.  Be sure that you prioritize security rules on the basis of your threat model. 
+
+In particular, avoid *security theater*. [According to security expert Bruce Schneier](https://www.schneier.com/blog/archives/2009/11/beyond_security.html): 
+
+> Security theater refers to security measures that make people feel more secure without doing anything to actually improve their security. An example: the photo ID checks that have sprung up in office buildings. No-one has ever explained why verifying that someone has a photo ID provides any actual security, but it looks like security to have a uniformed guard-for-hire looking at ID cards.
+
+A common IT example are rules requiring that passwords be changed on a fixed schedule. There [isn't any evidence that this actually improves security](https://www.sans.org/security-awareness-training/blog/time-password-expiration-die), and certainly not compared to things like using unique passwords in a password manager and maintaining the central control to revoke access if there's a breach. It's probably harmful, because it encourages people to be lazy and stick their ever-changing password on a post-it note by the computer. (The same is true of arbitrary password complexity rules like "has to have one capital letter, one lower case letter, one symbol," blah blah.  Just require use of a password manager that actually has the capacity to generate good random long passwords.)
+
+### Have someone in charge.
+
+- Who is responsible for making sure all software is updated?
+- Who will employees call if their firm laptop is stolen? 
+- Make sure you have the capacity to revoke any privileges it has and remotely wipe it if it connects to the internet. IT vendors can help with this.
+- If employees have access to firm data on their personal devices, you need to know about it, and make sure they let you know if that’s lost/stolen too.
+- Who will employees call to verify sensitive requests (like money 
+transfers?) 
+    - There needs to be a clear point of contact and clear responsibility for security
+
 ## A few more pieces 
 
 - What happens if you lose your laptop, or your phone?  Both Windows and Mac have a full-disk encryption product built in; it's called BitLocker in Windows and FileVault in Mac. It will encrypt your hard drive when the computer is off, and is pretty much costless (if you have a slow hard drive it might make startup take a few extra seconds). On your phone, use a passcode and have it automatically lock very quickly. (If you're worried about the government, there's conflicting opinion on whether the compelled use of FaceID or TouchID as opposed to a passcode is problematic under the 5th Amendment.)
@@ -293,9 +313,65 @@ You're ethically obliged to manage your staff to protect client data and propert
 - It's generally a very good idea to outsource as much as possible of your sensitive IT to pros.  This is what "enterprise" software is *for*.  Gigantic companies like Microsoft and Google will happily take your money to run all your firm's e-mail, file-sharing, calendaring, etc. etc. in the cloud, and they can do it much better than you can (probably cheaper too). 
     - Remember the Panama Papers case again. Apparently that firm [was running its own website where clients could upload sensitive documents](https://www.wired.co.uk/article/panama-papers-mossack-fonseca-website-security-problems). That is incredibly stupid. Don't do that. Pay someone who knows what they're doing. 
 
+
+Be careful with browser autofill, there have been exploits published recently where people 
+have gotten browser autofill to leak all kinds of sensitive data to hidden form fields.
+• Firewalls control network access to/from machines. Beyond my expertise, but it’s worth 
+consulting with an IT person.
+• Paper is still a thing to protect. Criminals still go through trash cans, so shredding is still a 
+thing to do.
+• Secure deletion of data: before you let any physical storage device go out of the building 
+(e.g., junking old devices), make sure that deleted files are really deleted. This is much 
+harder (possibly impossible) on SSDs than on HDDs.
+• Don’t let people hover by your shoulder when you type your password in.
+• Never access sensitive sites/type passwords/etc. on public kiosks, like hotel computers. 
+They can be full of keyloggers and other horribleness.
+
+P2P file sharing (torrents etc.) can be full of malware; don’t let anything that has touched it 
+also touch your network/client data.
+• Have a separate "guest" wifi network at your office, don’t let nonemployees onto the same 
+network that your staff uses.
+• Don’t abandon domain names; even if your firm changes name or winds up keep paying 
+the registration on the old one. Otherwise malicious actors can take them over. What 
+happens if a former client sends confidential information to an e-mail there?
+• Don’t install unnecessary software, even things like browser extensions can introduce 
+security holes. Keep it lean.
+• Minimize use of Internet of Things devices (smart thermostats, lightbulbs, etc.), they tend 
+to have terrible security vulnerabilities. Don’t let them on a network that also sees client 
+data. 
+
+
+
 ## Further Reading
 
 - [ABA Techreport 2018 on Cybersecurity](https://www.americanbar.org/groups/law_practice/publications/techreport/ABATECHREPORT2018/2018Cybersecurity/)
 
 - [EFF on Surveillance Self-Defense](https://ssd.eff.org)
+
+UC Berkeley has several good guides, including: 
+• International travel: https://security.berkeley.edu/resources/best-practices-
+how-articles/international-travel/security-tips-international-travel
+• Phishing: https://security.berkeley.edu/resources/phishing
+• A company called PagerDuty put (most of) the security trainings it 
+gives its employees online: https://sudo.pagerduty.com
+
+Frontline Defenders (a human rights group), Workbook on Security: 
+https://www.frontlinedefenders.org/en/resource-
+publication/workbook-security-practical-steps-human-rights-
+defenders-risk (Mostly focused on physical security, but has a ton of 
+material about threat assessment.)
+• Belfer Center (Harvard) cybersecurity playbook for political 
+campaigns: https://www.belfercenter.org/CyberPlaybook
+• TechSolidarity security guide: 
+https://techsolidarity.org/resources/basic_security.htm
+
+The ABA law practice division sells a book called "Locked Down: 
+Practical Information Security for Lawyers." I highly recommend it.
+• Two recent ABA formal ethics opinions (this is an ethics CLE, after all): 
+• Formal opinion 477, May 11 2017: the ABA’s take on the lawyer’s ethical 
+obligation to use sound security principles to protect confidential information.
+• Formal opinion 483, October 17, 2018: lawyer’s ethical obligations after a 
+data breach to inform clients and mitigate consequences.
+
+Get these slides: http://paul-gowder.com/infosec.pdf
 
