@@ -66,7 +66,9 @@ Ok, with that preliminary out of the way, let's cover the two broad categories o
 
 ## Human Vulnerability
 
-A lot of real-world data breaches happen not because someone found a hole in your e-mail server, but because someone convinced your associate, or your paralegal, or you, that they were the client's vice president and you need to send them the financial documents at this e-mail right now, hurry, urgent! That is, [they happen because of human vulnerabilities rather than because of computer vulnerabilities](http://smbc-comics.com/comic/2012-02-20), or, in infosec person lingo, "[social engineering](https://www.amazon.com/Art-Deception-Controlling-Element-Security/dp/076454280X)".
+Human psychology---your own, and that of your staff---is a big threat to your and your clients' information and money. The urge to respond hastily to manufactured urgency, to be polite and not treat people as suspicious, to follow the orders of apparent authority---these are all qualities that attackers can exploit.
+
+A lot of real-world data breaches happen not because someone found a hole in your e-mail server, but because someone convinced your associate, or your paralegal, or you, that they were the client's vice president and you need to send them the financial documents at this e-mail right now, hurry, crisis! That is, [they happen because of human vulnerabilities rather than because of computer vulnerabilities](http://smbc-comics.com/comic/2012-02-20), or, in infosec person lingo, "[social engineering](https://www.amazon.com/Art-Deception-Controlling-Element-Security/dp/076454280X)".
 
 The ABA is on the case of this one too. See comment 18 to rule 1.6: 
 
@@ -74,9 +76,85 @@ The ABA is on the case of this one too. See comment 18 to rule 1.6:
 
 If you follow the security world at all, you'll never cease to be shocked by how many seemingly obvious mistakes people make. For example, would you send a two-factor authentication text message that you received (more on this below) to a random stranger? [Some people will](https://twitter.com/RachelTobac/status/996556819886583808).  Would you plug a random USB drive that you find on the street into your computer? [Some people will](https://www.theregister.co.uk/2016/04/11/half_plug_in_found_drives/). 
 
+Familiar examples of security problems that rely on human vulnerability include: 
+
+- The fake log-in page. Someone sends a phishing e-mail purporting to be from, say, Google, or Facebook, or your bank, asking you to log into the site to carry out some task. You click the link, and your credentials are stolen. This is [how the Russians got a bunch of e-mails](https://www.apnews.com/dea73efc01594839957c3c9a6c962b8a) in the 2016 election.
+
+    - The standard advice people give for mitigating this threat is to make sure that you go directly to websites, i.e., by typing the address into the browser. 
+    - On the telephone, if people from some company call asking for any information, call them back at some number you know/find independently.
+    - Also: hover the mouse over links, don’t go to them if they look suspicious (including URL shortener links like bit.ly), and be careful with common typo tricks, like .co domains instead of .com, similar- appearing typoes.
+
+Here is a chart of common deceptive URL forms, which I have swiped from [So Long, And No Thanks for the Externalities: The Rational Rejection of Security Advice by Users](https://www.microsoft.com/en-us/research/publication/so-long-and-no-thanks-for-the-externalities-the-rational-rejection-of-security-advice-by-users/), by Cormac Herley of Microsoft Research (so, obviously, copyright on that image is Herley's/Microsoft's, and I'm using it under a fair use claim).
+
+![Deceptive URLs]({static}../images/urls.png)
+
+- The malicious attachment (or, in some cases, the malicious web page) that, when clicked on, runs dangerous code. Most people know about threats like Microsoft Office macros, but did you know that even [PDFs can carry malware?](https://www.sophos.com/en-us/security-news-trends/security-trends/the-rise-of-document-based-malware.aspx).  Also, suspicious file types can have file names/extensions suggesting that they're innocent.
+
+    - In general, the best practice is probably to avoid e-mail attachments anyway. 
+        - When possible, prefer sharing information in ordinary e-mail text rather than attachments. 
+        - For internal file sharing, you can use a good enterprise quality file-sharing service from a company like Dropbox, Microsoft, or Google. 
+        - For files from clients, you should probably pay someone to provide a secure upload portal. (Suggestions for legal tech vendors would be welcome here...) 
+    - If you MUST use attachments: 
+        - Turn on your operating system’s ability to see extensions, and watch out for double extensions (like .pdf.exe). 
+        - Never allow an e-mail attachment to run macros or any other code that MS Word etc. might prompt you to run. 
+        - Take advantage of attachment screening and preview functionality in webmail applications. For example, Outlook in Office 365 online will let you preview attachment contents without downloading to your computer.
+
+
+- The "urgent" e-mail from a trusted person, like a boss, asking for sensitive information or to carry out sensitive actions. *Do your office staff know what to do if they get an e-mail from "you" asking them to send confidential client information?*
+
+    - A common recommendation to mitigate this threat is to directly reach out to the supposed sender by a known and trusted contact method (i.e., call the boss before sending the contents of the trust account). Ideally, employees should have a designated point of contact to independently reach out to in order to verify all sensitive requests. 
+
+Sophisticated social engineering attacks can go through multiple steps, tricking people out of small bits of information at each step, and then using that information to get the next, bigger, bit of information later. 
+
+- The first call might be to the firm's receptionist: "*This is Joe Schmoe from SensitiveCo! I need to talk to the partner in charge of our file ASAP!*" "*Ok, I’ll pass you to Laura Lawyer.*" 
+
+- Now the attacker has verified the identity of the client (which might have been confidential) and gotten the name of the partner in charge. That information might be used in a second social engineering attempt. Call to paralegal in a different office: "*This is Laura Lawyer, I need the last letter from SensitiveCo faxed to this number ASAP!*"
+
+Also, for god's sake, don't plug random devices (USB drives or anything else) into your computer or your network.. 
+
 ## Technical Vulnerability
 
+I'll describe a few categories of standard technical vulnerability.
+
+### Malware/Viruses/Trojans/Spyware
+
+Hopefully following some of the advice above will reduce the surface area exposed to attack in your firm. But it can't eliminate it. Here are a couple more things that might help.
+
+- First, ransomware attacks have been in the news a lot.  The best strategy for ransomware mitigation is to have a strong backup strategy. You should have multiple backups, in different locations (i.e., on local hard drives, remote), and they should be keeping old backups (e.g., if you run daily backups, it should have plenty of previous days stored).  Then you will hopefully be capable of restoring your whole hard drive to a time before the malware hit the machine and minimizing data loss. 
+
+- Second, let your operating system help you prevent malware. When possible, rely on software downloaded, for example, from the Mac App Store (or the equivalent in your operating system) rather than from less trusted sources. That sort of thing isn't a panacea, but at least big company run app stores have some screening as well as identity registration for programmers. (The Mac App Store is particularly good, because there are also specific technical restrictions imposed on getting access to it, such as "sandboxing" which limits the access to your data that an application can get.  Also, Macs have other security features, like only allowing code signed by a registered developer---leave those turned on.)
+
+    - Also, listen to warnings---if an application generates a popup asking for permission to do something that sounds weird, like "control your computer"---don't just mindlessly click yes!  The same goes for browser security warnings, by the way. 
+
+- Antivirus programs are controversial: many are garbage, some are malware themselves (one common attack is to generate a popup saying that you have an infection and prompt you to install some "antivirus" program that isn't).  
+    - For Windows, Microsoft provides one of its own, called "Windows Defender."  That's probably your best bet.
+    - For Macs, big corporate IT departments seem to recommend Sophos a lot. 
+
+### Routers and Other Network Setups
+
+Networking tends to be a major security hole in general. If someone has access to your network, they can sit around and listen to any unencrypted data you send or receive. (That's very bad.)
+
+- Learn how to change the administrator password and update the firmware for the router you use for your office/home networking, and do it!
+
+- Have separate networks for staff and for visitors, and don't let any client data touch the visitor network.
+
+- Don't use public WiFi for anything sensitive. (Some people recommend using VPN services, but there's a debate about whether they really make it any safer.)
+
+### Obsolete Software
+
 On some reports, the Panama Papers hack was potentially facilitated [because of obsolete versions of the popular website authoring software, WordPress and Drupal](https://www.theregister.co.uk/2016/04/07/panama_papers_unpatched_wordpress_drupal/), which didn't important security patches.
+
+
+### The Special Problem of Android
+
+Frankly, I wouldn't let most Android phones touch any sensitive data.  Maybe the Google-made one (the Pixel), maybe. Several reasons: 
+
+- Manufacturers are responsible for OS updates, and in many cases they don’t bother. (That's why the Pixel is probably the least horrible, as we can probably expect Google's own Android phone to get updates.)
+
+- Android is less strict about user data control than iOS; a number of applications have been caught leaking data all over the place.
+
+-  Some of the manufacturers are shady (the U.S. intelligence community has actually recommended against using some Chinese-manufactured phones, for e.g., because of worries about spying).
+
 
 ## Further Reading
 
