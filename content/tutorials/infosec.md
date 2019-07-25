@@ -136,14 +136,39 @@ Networking tends to be a major security hole in general. If someone has access t
 
 - Learn how to change the administrator password and update the firmware for the router you use for your office/home networking, and do it!
 
-- Have separate networks for staff and for visitors, and don't let any client data touch the visitor network.
+- Have separate networks for staff and for visitors, and don't let any client data touch the visitor network. 
+
+    - For that matter, don't let employees' personal devices touch the staff network. They can use the visitor network; anything that touches client data or that touches any network that touches client data should be a centrally managed device (i.e., you know and can control what software is installed) that you own.
 
 - Don't use public WiFi for anything sensitive. (Some people recommend using VPN services, but there's a debate about whether they really make it any safer.)
 
+- Don't let anything connect to your internal network unless you need it.  Do you need that WiFi connected coffeemaker?  Do you really want to take on the burden of any holes it may introduce?
+
 ### Obsolete Software
 
-On some reports, the Panama Papers hack was potentially facilitated [because of obsolete versions of the popular website authoring software, WordPress and Drupal](https://www.theregister.co.uk/2016/04/07/panama_papers_unpatched_wordpress_drupal/), which didn't important security patches.
+**UPDATE ALL YOUR SOFTWARE!** Yes, Windows updates are super annoying.  Run them anyway!  New security vulnerabilities are discovered all the time, and when they are discovered, they tend to propagate fairly quickly: if you don't update, suddenly you're running software with a known hole in it. 
 
+*Real-world dire example*: On some reports, the Panama Papers hack was potentially facilitated [because of obsolete versions of the popular website authoring software, WordPress and Drupal](https://www.theregister.co.uk/2016/04/07/panama_papers_unpatched_wordpress_drupal/), which didn't have important security patches.  
+
+Operating system security updates are probably the most important, but any software you use is important. Vulnerabilities in other software can give attackers the power to run their own commands on your system, which is very bad. Other particularly high-priority updates include Microsoft Office, web browsers, anything providing a client-facing service (like WordPress). But really, update everything.
+
+A quick conceptual note.  There are roughly three different kinds of update in the world: 
+
+- *Security updates* or *security patches* are updates to a given version of an operating system (like to Microsoft Word 314.15), where the update doesn't change the version number of the product. These should be free (if they're not, you really shouldn't do business with that vendor), and sometimes are installed automatically if you have your software's auto-update feature turned on.
+
+- *Minor version updates* or patches are updates to the general functionality of an existing product, that usually don't change the branding or major usage of a product, and are often accompanied by a change in version numbers after a period --- for example, from iOS version 12.3 to 12.4.  Sometimes minor version updates also include security updates, and sometimes you can't get security updates separate from minor version updates (like in iOS). These are usually free, and sometimes are installed automatically if you have your software's auto-update feature turned on.  Usually, the further to the right a digit is in the update, the "smaller" the update will be, i.e., 12.3.1 is a much smaller update than 12.4.
+
+- *Major version updates* are big revisions to a product. For example, the change from Office 2016 to Office 365, or Windows 8 to Windows 10.  These often are accompanied by a branding change, sometimes (Microsoft) involve paying more money and sometimes (Apple) don't. Usually this involved a number change to the left of the period (with the exception of MacOS, which has moved major versions with 10.1, 10.2, 10.3 etc. for years and years). Effectively, a major version update is a whole new product, and might involve a radical change in functionality or user interface.
+
+You should *always* apply security updates right away.  You should *usually* apply minor version updates right away, depending on whether they include security updates or whether those come separately---sometimes it might be reasonable to let it wait a little bit to make sure they don't break your machine. You have a bit more discretion in terms of major updates.
+
+Old major versions of operating systems usually get security updates, so you don't have to buy a whole new version of Windows every year; the same applies to old versions of Word etc.  But this is limited: at a certain point, the companies will announce "end of life" or "end of support," and the software will be officially obsolete; at that point it won't get security updates and will officially be dangerous to use. For example, [Windows 7 reaches end of support on January 14, 2020](https://www.microsoft.com/en-us/microsoft-365/windows/end-of-windows-7-support).  If you're using Windows 7 after that, you're asking for trouble. 
+
+- Here's [Microsoft's end-of-support hub](https://support.microsoft.com/en-gb/hub/4095338/microsoft-lifecycle-policy) which points you to information about updates for specific processes. Apple tends to be a bit more aggressive about demanding you update operating system versions to get the latest security updates and such, but apple operating systems are free, so fair enough.
+
+*Commentary interlude:* [Iowa Ethics Opinion 14-01](https://www.iowabar.org/group/Ethics) has decided that Iowa lawyers are under an obligation to "engage in a due diligence process" to determine what to do about end-of-life for operating systems, but aren't specifically required to update. This seems too weak to me, and the bar is going to regret it when some idiot who is still using Windows 95 gets hacked.
+
+Also, hardware sometimes reaches end of life and then won't be compatible with new operating systems. At a certain point, I'm afraid you have to shell out for new laptops. Sorry. 
 
 ### The Special Problem of Android
 
@@ -155,6 +180,52 @@ Frankly, I wouldn't let most Android phones touch any sensitive data.  Maybe the
 
 -  Some of the manufacturers are shady (the U.S. intelligence community has actually recommended against using some Chinese-manufactured phones, for e.g., because of worries about spying).
 
+## Passwords and Login Codes
+
+The reality is that passwords get leaked. Lots of companies do dumb things with encryption, and so it's inevitable that, for example, that company that asked you to make an account to buy discount pet food or something is going to lose its password database, and then there'll be a spreadsheet floating around with your e-mail and password for that site. This will happen, you can't avoid it.  (If you want to see what's been leaked, [haveibeenpwned](https://haveibeenpwned.com) is pretty good at tracking many of these breaches. 
+
+- Incidentally, this is why [people have started trying to con suckers](https://www.theguardian.com/technology/askjack/2019/jan/17/phishing-email-blackmail-sextortion-webcam) with "blackmail spam," e-mails where they send you one of your passwords to prove they know it, and then claim they've hacked your computer and have videos of you watching really nasty porn, so send money.  Crooks just grab leaked passwords from these datasets and use them to try to social engineer people into believing they've been hacked. 
+
+    - That being said, it's probably a good idea to cover webcam cameras when you're not actively using them. Can't hurt, better safe than sorry.
+
+So if your passwords are going to get leaked, what do you do?  Easy.
+
+**1.  NEVER NEVER EVER NEVER EVER REUSE PASSWORDS.** (And obviously, if you learn that a service you use has been breached, change your password there.)
+
+**2.  USE LONG, RANDOM PASSWORDS.** AKA "strong" passwords.
+
+"Ok Gowder, how do I remember all the passwords I use?  And how do I type them in reliably? And how do I know if the password I've made is good?"  The answer is: 
+
+**3.  USE A PASSWORD MANAGER.**
+
+A good password manager should: 
+
+1.  Securely save all your passwords, relieving you of the obligation to remember them (except for the one password that protects your password manager).
+
+2.  Auto-fill those passwords at least sometimes, so you don't have to type them in.
+
+3.  Generate strong passwords for you.
+
+If you have to pick one thing to do to make your security much stronger, and incidentally make life easier as well (the one security improvement that actually makes life *more* convenient), get a password manager, and also require your employees to use one. 
+
+Popular password managers include [LastPass](https://www.lastpass.com/), [1Password](https://1password.com), and  [Dashlane](https://www.dashlane.com).  If you're embedded in the Apple ecosystem, you can also just use [Apple's built-in solution](https://support.apple.com/en-gb/HT204085). 
+
+Using a password manager is the bare minimum of computer security. In my opinion, it’s flat-out negligent to store client data anywhere with a reused password. 
+
+- Your password manager will need a master password; that one you need to memorize. [Here’s a good guide for picking one](https://support.1password.com/strong-master-password/).
+
+- Your password manager, when it generates random passwords for you, will ask you how long and how many types of characters. Make it long and use lots of types of characters. You usually won’t have to type it.
+    - Most password managers have browser extensions that just insert it into the web form you, also mobile apps with similar functionality.
+    - 20 characters is a good number.
+- When you get your password manager, change all your passwords. Once your existing passwords are in there, some password managers have a function to automatically change many of them for you.
+
+- Some companies still ask you to answer password recovery questions like "what was the make of your first car" when you sign up for an account. That sort of thing is a big security hole (how hard would it be for a social engineer to find out? Not very.), so many people give them fake information and treat that like another password, to be randomly generated and stored in the password manager.
+
+After a password manager, there's one other easy step that's really important: 
+
+**4.  TURN ON TWO-FACTOR AUTHENTICATION WHEREVER POSSIBLE**
+
+[explain]
 
 ## Further Reading
 
