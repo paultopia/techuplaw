@@ -9,6 +9,18 @@ I am not a security professional, though I did run the materials for the CLE pre
 
 With those caveats in hand, let's begin. 
 
+## I only have a minute, just tell me some things I can do? 
+
+If you want a menu of quick security improvements to make it less likely that someone will make off with your client information or trust account, start with the following three basic and minimal techniques: 
+
+1.  Use a password manager, and let it generate unique, random passwords for everything.  
+
+2.  Keep your operating system and other software updated. 
+
+3.  Train everyone who works for you to use a designated contact to independently verify any request for client information or funds transfer that they receive over phone, email, or text---and not to trust that identities on phone, email, and text are what they say they are.
+
+All of those steps, as well as much more, are described below. 
+
 ## Why should I, a lawyer, worry about information security? 
 
 First of all, **you have a duty to do so**. It's widely recognized that the ethical duty of competence includes a duty to be technologically competent. In the words of the [comment to ABA Model Rule 1.1](https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_1_competence/comment_on_rule_1_1/): 
@@ -121,6 +133,9 @@ I'll describe a few categories of standard technical vulnerability.
 Hopefully following some of the advice above will reduce the surface area exposed to attack in your firm. But it can't eliminate it. Here are a couple more things that might help.
 
 - First, ransomware attacks have been in the news a lot.  The best strategy for ransomware mitigation is to have a strong backup strategy. You should have multiple backups, in different locations (i.e., on local hard drives, remote), and they should be keeping old backups (e.g., if you run daily backups, it should have plenty of previous days stored).  Then you will hopefully be capable of restoring your whole hard drive to a time before the malware hit the machine and minimizing data loss. 
+    - This is a good spot to talk about backups. They also prevent catastrophe from things like hard drive failures or natural disasters.  You should have at least one local backup hard drive and one offsite, like a cloud backup. 
+        - Cloud backup providers: Backblaze, SpiderOak, Carbonite. Dropbox can also be a backup solution (and similar enterprise services by other companies)
+
 
 - Second, let your operating system help you prevent malware. When possible, rely on software downloaded, for example, from the Mac App Store (or the equivalent in your operating system) rather than from less trusted sources. That sort of thing isn't a panacea, but at least big company run app stores have some screening as well as identity registration for programmers. (The Mac App Store is particularly good, because there are also specific technical restrictions imposed on getting access to it, such as "sandboxing" which limits the access to your data that an application can get.  Also, Macs have other security features, like only allowing code signed by a registered developer---leave those turned on.)
 
@@ -140,7 +155,14 @@ Networking tends to be a major security hole in general. If someone has access t
 
     - For that matter, don't let employees' personal devices touch the staff network. They can use the visitor network; anything that touches client data or that touches any network that touches client data should be a centrally managed device (i.e., you know and can control what software is installed) that you own.
 
-- Don't use public WiFi for anything sensitive. (Some people recommend using VPN services, but there's a debate about whether they really make it any safer.)
+- Don't use public WiFi for anything sensitive. Anyone else connected to the access point can just listen to all unencrypted data you send. Turn off the WiFi when you go to the airport.
+    - Some people recommend using VPN services, but there's a debate about whether they really make it any safer. The idea is that encrypt all the data, which gets sent to the VPN, and then passed along to destination, so local network never sees unencrypted data. Unfortunately, that means you have to trust the VPN provider. Still, any of the major companies are likely much better than some random airport wifi. Big organizations often offer a corporate VPN for these purposes.)
+    - Tor is a more complicated system for concealing internet traffic from snoopers; it’s 
+probably not necessary for ordinary threats, and if you’re thinking about using it, you probably should talk to a pro.
+
+- Browser security hygiene: *https* means encrypted connections to websites so that passwords and such can’t be intercepted. *http* is not encrypted.
+    - Modern browsers are nice enough to warn you when you’re not on an encrypted connection; pay attention to these warnings. And look for the nice padlock and such.  
+    - The EFF [kindly provides a browser extension](https://www.eff.org/https-everywhere) to force encrypted connections where possible
 
 - Don't let anything connect to your internal network unless you need it.  Do you need that WiFi connected coffeemaker?  Do you really want to take on the burden of any holes it may introduce?
 
@@ -225,8 +247,55 @@ After a password manager, there's one other easy step that's really important:
 
 **4.  TURN ON TWO-FACTOR AUTHENTICATION WHEREVER POSSIBLE**
 
+The idea of two-factor authentication is that you can tell a service to not just demand a password ("*something you know*) but also for you to prove your identity by giving them information associated with *something you have*. That way, if your password is compromised, there's still another layer of defense. 
+
+There are roughly three different kinds of 2-factor authentication. 
+
+- Text messages. This is where you give a service your phone number, and they text you a code that you use to login after you enter your password.  This is better than nothing, but it's generally considered *not as secure as the other options*, because it depends on the security of your phone number.  And it turns out that phone companies are notoriously susceptible to social engineering, and many people have been victimized by [SIM-Jacking](https://www.vice.com/en_us/article/5984zn/listen-to-sim-jacking-account-ransom-instagram-email-tmobile), where they get the phone company to transfer your number to a SIM card they control. Then they can receive your texts (and also generate password resets and such)---it's really bad. 
+    - Incidentally, one thing to do to help with this risk is to [get a pin on your cellular account](https://www.wired.com/story/sim-swap-attack-defend-phone/). 
+    
+- Authentication apps.  Most companies that support 2-factor authentication will let you use an application to generate your code. Popular examples include Google Authenticator and [Authy](https://authy.com).  These applications work by using fancy cryptography math to generate time-limited codes which the server can also generate, so that only the person who has your physical phone with the app can get in.  Some applications also have the ability to receive push notifications; one common enterprise solution is [Duo](https://duo.com/). Some companies also generate their own authentication codes for their own apps, for example, by letting you use one device to authenticate another (Facebook, Apple) or have special authenticators to download (Microsoft).
+
+- Physical devices that you attach to your keychain and plug into a machine to generate a code (or just leave in a USB port on your computer). The most popular is the [Yubikey](https://www.yubico.com), though Google [just rolled one out too](https://cloud.google.com/titan-security-key/). 
+
+The EFF has a [great explainer on two-factor authentication](https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts). 
+
 [explain]
+
+## Security as a practice management problem
+
+You're ethically obliged to manage your staff to protect client data and property; this means training your staff in security and supervising them to ensure sound practices.  Here are some strategies: 
+
+- No personal accounts (email etc.) touch client information, only the enterprise-level firm e-mail account that you're paying a nice big and competent company to run. 
+
+- Require employees to use 2-factor authentication to access anything that has client information).
+
+- Make sure any device that touches client information is managed by you (i.e., a firm device) and updated (both operating system and 3rd party applications). Don’t allow employees to touch client information with personal devices
+
+- If you have high security needs (if your threat model involves corporate spies or governments, for example), pay for professional staff training and testing.     - There are "red team" or "pentesting" companies that will try to exploit staff weaknesses (+ network, physical weaknesses), and then report to you on what they managed to do.
+
+- Physical security matters. Require staff to lock computers when they leave the desk, ask unknown people lurking around workspaces if they need help, refrain from discussing client business in public, etc.
+
+- Don’t give staff access to client information they don’t need.
+
+- Do not share user accounts on firm computers, networks. Every employee has their own account, with central IT capacity to limit access to sensitive resources and revoke access on termination.
+
+## A few more pieces 
+
+- What happens if you lose your laptop, or your phone?  Both Windows and Mac have a full-disk encryption product built in; it's called BitLocker in Windows and FileVault in Mac. It will encrypt your hard drive when the computer is off, and is pretty much costless (if you have a slow hard drive it might make startup take a few extra seconds). On your phone, use a passcode and have it automatically lock very quickly. (If you're worried about the government, there's conflicting opinion on whether the compelled use of FaceID or TouchID as opposed to a passcode is problematic under the 5th Amendment.)
+
+- What about borders?  Governments (including ours) claim the right to search electronic devices carried across international borders. Ours is bad, but other countries are even worse.  Some countries have been known to demand passwords to cloud accounts at the border, for example. 
+    -  If you have extremely sensitive information on your device (you’re a human rights lawyer suing that country, for example), it’s probably a good idea to do things like bring a burner device, use 2factor authentication tied to a second factor left at home to disable yourself from accessing sensitive accounts, etc. There's a [Wired Magazine article with some strategies](https://www.wired.com/2017/02/guide-getting-past-customs-digital-privacy-intact/).
+    
+- In terms of ordinary messaging, probably the most secure application is [Signal](https://signal.org). It's written by dedicated security people to encrypt as much as possible. WhatsApp, Telegram and the built in iOS iMessage are all more secure than ordinary SMS or e-mail as well, because they too use "end-to-end encryption."  E-mail is very hard to secure; there are companies that offer encrypted e-mail (like ProtonMail), but it's still not terribly clear how secure it is---it's probably safest to assume that e-mail is not for very sensitive information. 
+    - Remember that Signal and similar apps can’t protect you against people who voluntarily share messages they can see (social engineering, etc.)---they’re just decent anti-hacking protections.
+
+- It's generally a very good idea to outsource as much as possible of your sensitive IT to pros.  This is what "enterprise" software is *for*.  Gigantic companies like Microsoft and Google will happily take your money to run all your firm's e-mail, file-sharing, calendaring, etc. etc. in the cloud, and they can do it much better than you can (probably cheaper too). 
+    - Remember the Panama Papers case again. Apparently that firm [was running its own website where clients could upload sensitive documents](https://www.wired.co.uk/article/panama-papers-mossack-fonseca-website-security-problems). That is incredibly stupid. Don't do that. Pay someone who knows what they're doing. 
 
 ## Further Reading
 
 - [ABA Techreport 2018 on Cybersecurity](https://www.americanbar.org/groups/law_practice/publications/techreport/ABATECHREPORT2018/2018Cybersecurity/)
+
+- [EFF on Surveillance Self-Defense](https://ssd.eff.org)
+
