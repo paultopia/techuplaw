@@ -230,7 +230,7 @@ A good password manager should:
 
 If you have to pick one thing to do to make your security much stronger, and incidentally make life easier as well (the one security improvement that actually makes life *more* convenient), get a password manager, and also require your employees to use one. 
 
-Popular password managers include [LastPass](https://www.lastpass.com/), [1Password](https://1password.com), and  [Dashlane](https://www.dashlane.com).  If you're embedded in the Apple ecosystem, you can also just use [Apple's built-in solution](https://support.apple.com/en-gb/HT204085). 
+Popular password managers include [LastPass](https://www.lastpass.com/), [1Password](https://1password.com), and  [Dashlane](https://www.dashlane.com).  If you're embedded in the Apple ecosystem, you can also just use [Apple's built-in solution](https://support.apple.com/en-gb/HT204085). Wired Magazine has a [writeup of good password manager options](https://www.wired.com/story/best-password-managers/).
 
 Using a password manager is the bare minimum of computer security. In my opinion, it’s flat-out negligent to store client data anywhere with a reused password. 
 
