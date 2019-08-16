@@ -81,3 +81,5 @@ On some reports, the Panama Papers hack was potentially facilitated [because of 
 ## Further Reading
 
 - [ABA Techreport 2018 on Cybersecurity](https://www.americanbar.org/groups/law_practice/publications/techreport/ABATECHREPORT2018/2018Cybersecurity/)
+- [Citizen Lab's Security Planner](https://securityplanner.org/#/)
+
