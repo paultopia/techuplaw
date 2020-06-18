@@ -7,23 +7,23 @@ This one is for academics rather than practitioners, though some of the details 
 
 Here are the considerations, in rough order of priority, that drive me: 
 
-1.  I like to have lots and lots of backups.  I'm incredibly paranoid about losing work. 
+A.  I like to have lots and lots of backups.  I'm incredibly paranoid about losing work. 
 
-2.  I utterly loathe Microsoft Word.  I won't use it if it can be helped at all.  Yet I recognize that many people that publish things I write need Word format, so I need to do something that converts to Word fairly readily.  Subconsiderations: 
+B.  I utterly loathe Microsoft Word.  I won't use it if it can be helped at all.  Yet I recognize that many people that publish things I write need Word format, so I need to do something that converts to Word fairly readily.  Subconsiderations: 
     
-  A. I want something that doesn't crash or hang all the time, unlike Word. (It's utterly mind-blowing how badly Word performs.  I have a brand new souped up 16-inch Macbook Pro with an i9 and 32 gigs of ram. Word still takes forever to start. It takes longer to start than XCODE, which, for those of you who program, you're probably screaming in horror at the very idea.)
+  1. I want something that doesn't crash or hang all the time, unlike Word. (It's utterly mind-blowing how badly Word performs.  I have a brand new souped up 16-inch Macbook Pro with an i9 and 32 gigs of ram. Word still takes forever to start. It takes longer to start than XCODE, which, for those of you who program, you're probably screaming in horror at the very idea.)
 
-  B.  If I want to do something weird or automated with my content, I want to be able to do so.  My writing needs to be scriptable---I need to be able to read my writing into an ordinary programming language as a string, run code on it, and spit it back out again as a string.  This requires a plain text format. 
+  2.  If I want to do something weird or automated with my content, I want to be able to do so.  My writing needs to be scriptable---I need to be able to read my writing into an ordinary programming language as a string, run code on it, and spit it back out again as a string.  This requires a plain text format. 
 
-  C.  I also want something that doesn't impose involuntary formatting on me. Word "features" like styled paste, auto-conversion of URLS to links, bizarre dictatorial bullet point numbering, etc. etc. etc. are anathema to me. 
+  3.  I also want something that doesn't impose involuntary formatting on me. Word "features" like styled paste, auto-conversion of URLS to links, bizarre dictatorial bullet point numbering, etc. etc. etc. are anathema to me. 
 
-  D.  Most of the major alternatives to word (OpenOffice, Google Docs, Pages) are crap. 
+  4.  Most of the major alternatives to word (OpenOffice, Google Docs, Pages) are crap. 
 
-3.  I also hate manually formatting my citations. 
+C.  I also hate manually formatting my citations. 
 
-4.  I like being able to relatively seamlessly switch between writing on my MacBook and on my iPad. 
+D.  I like being able to relatively seamlessly switch between writing on my MacBook and on my iPad. 
 
-5.  I want to use git for version control so that I can recover prior versions if something gets horribly screwed up. 
+E.  I want to use git for version control so that I can recover prior versions if something gets horribly screwed up. 
 
 So my workflow has the following elements: 
 
