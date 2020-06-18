@@ -41,7 +41,7 @@ So my workflow has the following elements:
 
 I tend to go through a process using these tools over and over.  I'll write some markdown files.  When I think I have a draft of something, I'll convert it to PDF and open it up on my iPad for editing (using [iAnotate](https://www.iannotate.com) and the apple pencil to essentially simulate the experience of printing out a draft and marking it up).  Then I'll go back to my markdown file again and put in my edits.  And so on, and so forth. 
 
-For more complicated, larger, projects (long articles, books), I'll often involve [Scrivener](https://www.literatureandlatte.com/scrivener/overview) into this process.  I don't write in Scrivener (though lots of people do, and seem to do so happily).  Rather, I find that every large project tends to get into a messy, tangled, downright gnarly state where I have like a dozen markdown files with different parts of the text, and I'm no longer clear in my own head on what the best organization is.  When that happens to me, I'll start a new Scrivener project, import all the writing files directly in there, and then use the visual splitting, merging, and reorganization functions that Scrivener is famous for to reorganize the text as a whole.  Then I'll dump the whole thing right back out into one big markdown file, and go right back to Sublime Text to keep working from there. 
+For more complicated, larger, projects (long articles, books), I'll often involve [Scrivener](https://www.literatureandlatte.com/scrivener/overview) into this process.  I don't write in Scrivener (though lots of people do, and seem to do so happily).  Rather, I find that every large project tends to get into a messy, tangled, downright gnarly state where I have like a dozen markdown files with different parts of the text, and I'm no longer clear in my own head on what the best organization is.  When that happens to me, I'll start a new Scrivener project, import all the writing files directly in there, and then use the visual splitting, merging, and reorganization functions that Scrivener is famous for to reorganize the text as a whole.  Then I'll dump the whole thing right back out into one big markdown file, and go right back to Sublime Text to keep working from there.  I find that Scrivener is kind of a safety blanket for me: sometimes when I want to write, I want to *write*, and spending a bunch of time thinking about organization/how *exactly* what I'm writing fits into the broader system of the project can get in the way and waste productive putting-words-on-paper time.  Having the confidence that I have a really good tool to go back and fix all my organization problems frees me to just 
 
 This system isn't perfect.  It has the following rough edges: 
 
@@ -51,4 +51,8 @@ This system isn't perfect.  It has the following rough edges:
 
 -  My workflow only works until someone else touches a document.  Once I submit to a publisher, or send a draft to a co-author when I use one, it inevitably has to be in MS Word, and then I'm back in the hellpit.  Oh well.  
 
-The technical details of how I set everything up, plus an example github repository that contains a skeleton project, forthcoming. In the meantime, see [Kieran Healy's website](https://plain-text.co): Healy uses many (though not all) of the same tools I do, and has dived into much more detail on them.
+More technical details of how I set everything up forthcoming. In the meantime, see:
+
+1. I've created [a github repository with a sample markdown document and citation file](https://github.com/paultopia/sample-writing-project) and instructions on how to build it.
+
+2.  [Kieran Healy](https://plain-text.co) uses many (though not all) of the same tools I do, and has dived into much more detail on them.
